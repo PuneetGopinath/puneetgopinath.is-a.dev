@@ -1,7 +1,9 @@
 import fs from "fs";
 
 export const getServerSideProps = ({ req, res }) => {
-  const baseUrl = `${new URL(`${process.env.HTTPS ? "https" : "http"}://${req.headers.host}`)}`;
+  const baseUrl = `${new URL(
+    `${process.env.HTTPS ? "https" : "http"}://${req.headers.host}`
+  )}`;
 
   const staticPages = fs
     .readdirSync("pages")
@@ -14,9 +16,7 @@ export const getServerSideProps = ({ req, res }) => {
       ].includes(staticPage);
     })
     .map((page) => {
-      const path = page
-        .replace(".js", "")
-        .replace(/\/index/g, "");
+      const path = page.replace(".js", "").replace(/\/index/g, "");
       const routePath = path === "index" ? "" : path;
       return `${baseUrl}${routePath}`;
     });
@@ -47,4 +47,4 @@ export const getServerSideProps = ({ req, res }) => {
   };
 };
 
-export default function Sitemap() {};
+export default function Sitemap() {}
