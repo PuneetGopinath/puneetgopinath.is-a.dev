@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://puneetgopinath.vercel.app/sitemap.xml
