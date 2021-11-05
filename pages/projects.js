@@ -10,8 +10,8 @@ export default function Projects() {
         <p className={styles.description}>
           <ol>
             <li>
-              <Link href="https://github.com/Welcome-Bot/welcome-bot">
-                <a>Welcome-Bot - A discord bot</a>
+              <Link href="https://github.com/InfusionBot/InfusionBot">
+                <a>InfusionBot - A discord bot</a>
               </Link>
             </li>
             <li>
